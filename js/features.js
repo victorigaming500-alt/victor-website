@@ -79,7 +79,7 @@ window.VICTOR_FEATURES = [
       value: ["방대한 목록에서도 원하는 것을 빠르게 찾습니다", "경기를 찾지 못해 떠나는 플레이어가 줄어듭니다"] } },
 
   // 02 Betslip & Bets
-  { n: 10, cat: "betslip", points: "caps", screens: ["f10-1", "f10-2"],
+  { n: 10, cat: "betslip", points: "caps", screens: ["f10-2", "f10-1"], // Single mode first, then Multi
     en: { name: "Betslip (Single & Multi)", desc: "A floating betslip that holds every selection, switching between Single and Multi with live odds and return calculations.",
       list: ["Single and Multi tabs with stake input per selection", "Quick stake amounts and live \"To Return\" calculation", "Accept odds changes option to avoid rejected bets", "Clear error states for blocked or changed selections"],
       value: ["A fast, clear betslip directly increases placed bets", "Multis raise average odds and margin per slip"] },
