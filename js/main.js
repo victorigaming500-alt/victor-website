@@ -145,6 +145,9 @@
     });
   }
 
+  // Screens reuse their file names, so they carry the same version stamp as this script to skip old cached copies.
+  const ASSET_V = (document.currentScript && document.currentScript.src.match(/\?v=\d+/) || [""])[0];
+
   /* ---------- Features ---------- */
   function featureHTML(f) {
     const c = f[lang];
@@ -166,8 +169,8 @@
       "</div>" +
       // One screen: a single centred phone. Two screens: both, evenly spaced.
       '<div class="feature-preview' + (b ? "" : " is-single") + '">' +
-        '<div class="phone phone--a"><img src="' + dir + a + '.jpg" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
-        (b ? '<div class="phone phone--b"><img src="' + dir + b + '.jpg" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' : "") +
+        '<div class="phone phone--a"><img src="' + dir + a + '.jpg' + ASSET_V + '" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
+        (b ? '<div class="phone phone--b"><img src="' + dir + b + '.jpg' + ASSET_V + '" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' : "") +
       "</div></article>";
   }
   function renderFeatures() {
