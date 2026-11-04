@@ -195,7 +195,13 @@ body.no-scroll { overflow: hidden; }
   background: var(--surf); border: 1px solid var(--line); border-radius: var(--radius);
   overflow: hidden; display: flex; flex-direction: column;
 }
+.product { transition: border-color .3s ease, box-shadow .3s ease; }
+.product-media { position: relative; overflow: hidden; }
 .product-img { width: 100%; aspect-ratio: 1146 / 780; object-fit: cover; }
+.product-img--lime { position: absolute; inset: 0; height: 100%; opacity: 0; transition: opacity .45s ease; }
+.product:hover .product-img--lime, .product:focus-visible .product-img--lime, .product:active .product-img--lime { opacity: 1; }
+.product:hover, .product:focus-visible { border-color: rgba(205, 240, 0, .55); box-shadow: 0 0 32px rgba(205, 240, 0, .18); }
+.product:focus-visible { outline: none; }
 .product-body { padding: 32px 32px 36px; display: flex; flex-direction: column; gap: 20px; }
 .product-title { display: flex; align-items: center; gap: 14px; }
 .product-title .icon-tile { width: 52px; height: 52px; border-radius: 2px; }
