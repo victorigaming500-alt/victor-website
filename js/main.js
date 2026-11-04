@@ -151,6 +151,8 @@
     const shots = f.screens;
     const a = shots[0], b = shots[1] || shots[0];
     const alt = esc(t("screen") + " " + c.name);
+    // Korean pages show the Korean version of each phone screen.
+    const dir = lang === "ko" ? "assets/screens-ko/" : "assets/screens/";
     return '<article class="feature" id="feature-' + pad(f.n) + '">' +
       '<div class="feature-text">' +
         '<div class="feature-meta"><p class="eyebrow">' + esc(catName(f.cat)) + "</p>" +
@@ -163,8 +165,8 @@
           c.value.map((x) => "<p>" + esc(x) + "</p>").join("") + "</div>" +
       "</div>" +
       '<div class="feature-preview">' +
-        '<div class="phone phone--a"><img src="assets/screens/' + a + '.jpg" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
-        '<div class="phone phone--b' + (b === a ? " is-same" : "") + '"><img src="assets/screens/' + b + '.jpg" alt="' + (b === a ? "" : alt) + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
+        '<div class="phone phone--a"><img src="' + dir + a + '.jpg" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
+        '<div class="phone phone--b' + (b === a ? " is-same" : "") + '"><img src="' + dir + b + '.jpg" alt="' + (b === a ? "" : alt) + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
       "</div></article>";
   }
   function renderFeatures() {

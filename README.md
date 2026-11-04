@@ -24,7 +24,7 @@ Then open http://localhost:8090. Add `?lang=ko` for Korean.
 | Interface text, product cards, behaviour | `js/main.js` |
 | Feature and product icons | `js/icons.js` |
 | Images | `assets/img/` |
-| Phone screens for each feature (`f<number>-<n>.jpg`) | `assets/screens/` |
+| Phone screens for each feature (`f<number>-<n>.jpg`) | `assets/screens/` (English), `assets/screens-ko/` (Korean) |
 
 ## Editing
 
