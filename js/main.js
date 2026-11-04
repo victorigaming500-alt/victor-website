@@ -325,6 +325,14 @@
     renderMarquee();
     renderFeatures();
   }
+  // Hero video: hold still for people who prefer reduced motion.
+  const heroVideo = document.querySelector("video.hero-bg");
+  if (heroVideo) {
+    const still = matchMedia("(prefers-reduced-motion: reduce)");
+    const apply = () => { if (still.matches) heroVideo.pause(); else heroVideo.play().catch(() => {}); };
+    apply(); still.addEventListener("change", apply);
+  }
+
   document.getElementById("year").textContent = new Date().getFullYear();
   render();
   setupNavSpy();

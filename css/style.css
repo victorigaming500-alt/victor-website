@@ -123,7 +123,7 @@ body.no-scroll { overflow: hidden; }
   aspect-ratio: 1440 / 700; min-height: 600px; max-height: 860px;
   display: flex; align-items: center; justify-content: center;
 }
-.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-bg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; background: #000; }
 .hero-content {
   position: relative; z-index: 1; text-align: center; max-width: 720px; padding: 0 24px;
   display: flex; flex-direction: column; align-items: center;
