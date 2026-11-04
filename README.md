@@ -31,7 +31,7 @@ Then open http://localhost:8090. Add `?lang=ko` for Korean.
 - **Feature text:** edit `js/features.js`. Each feature has `en` and `ko` text, the category,
   and which phone screens to show.
 - **Feature screens:** replace a file in `assets/screens/` with the same name (720 × 1600).
-  A feature with one screen shows it twice; with two screens it shows both.
+  A feature with one screen shows it centred; with two screens it shows both, evenly spaced.
 - **Product cards (E-sports, Slots, Promotions):** edit `products` in `js/main.js`.
 - **Contact form:** set `CONTACT_EMAIL` at the top of `js/main.js`. The form opens the
   visitor's email app with the message filled in. A server-side form can replace this later.

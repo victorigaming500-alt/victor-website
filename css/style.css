@@ -260,14 +260,16 @@ body.no-scroll { overflow: hidden; }
 .value-box p:not(.points-label) { font-size: 15px; color: var(--muted); }
 
 .feature-preview { position: relative; flex: 0 0 564px; height: 430px; align-self: center; }
+/* Phones: one screen sits in the middle; two screens get equal gaps at both sides and between. */
+.feature-preview { --pw: 273px; --gap: calc((100% - 2 * var(--pw)) / 3); }
 .phone {
-  position: absolute; width: 273px; aspect-ratio: 360 / 800; border: 1px solid var(--lime-edge);
+  position: absolute; width: var(--pw); aspect-ratio: 360 / 800; border: 1px solid var(--lime-edge);
   border-radius: 16px; overflow: hidden; background: var(--surf-2);
 }
 .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.phone--a { left: 1px; top: 23px; }
-.phone--b { left: 291px; top: -177px; }
-.phone--b.is-same img { object-position: top; }
+.phone--a { left: var(--gap); top: 23px; }
+.phone--b { left: calc(2 * var(--gap) + var(--pw)); top: -177px; }
+.feature-preview.is-single .phone--a { left: calc(50% - var(--pw) / 2); }
 
 /* Contact banner */
 .contact { padding: 40px 0 100px; }
@@ -348,9 +350,9 @@ html[lang="ko"] .list-label, html[lang="ko"] .footer-head, html[lang="ko"] .btn 
   .feature { flex-direction: column; align-items: stretch; gap: 32px; padding: 40px 40px 0; }
   .feature-desc, .value-box { max-width: none; }
   .feature-preview { flex: none; width: 100%; height: 420px; }
-  .phone { width: 220px; }
-  .phone--a { left: calc(50% - 232px); top: 24px; }
-  .phone--b { left: calc(50% + 12px); top: -40px; }
+  .feature-preview { --pw: 220px; }
+  .phone--a { top: 24px; }
+  .phone--b { top: -40px; }
 
   .contact-banner { padding: 48px; }
   .contact-title { font-size: 34px; }
@@ -409,9 +411,10 @@ html[lang="ko"] .list-label, html[lang="ko"] .footer-head, html[lang="ko"] .btn 
   .value-box { padding: 14px; }
   .value-box p:not(.points-label) { font-size: 14px; }
   .feature-preview { height: 300px; }
-  .phone { width: 150px; border-radius: 12px; }
-  .phone--a { left: calc(50% - 158px); top: 18px; }
-  .phone--b { left: calc(50% + 8px); top: -16px; }
+  .feature-preview { --pw: 150px; }
+  .phone { border-radius: 12px; }
+  .phone--a { top: 18px; }
+  .phone--b { top: -16px; }
 
   .contact { padding: 16px 0 64px; }
   .contact-banner { flex-direction: column; align-items: flex-start; gap: 24px; padding: 32px 24px; }

@@ -149,7 +149,7 @@
   function featureHTML(f) {
     const c = f[lang];
     const shots = f.screens;
-    const a = shots[0], b = shots[1] || shots[0];
+    const a = shots[0], b = shots[1];
     const alt = esc(t("screen") + " " + c.name);
     // Korean pages show the Korean version of each phone screen.
     const dir = lang === "ko" ? "assets/screens-ko/" : "assets/screens/";
@@ -164,9 +164,10 @@
         '<div class="value-box"><p class="points-label">' + esc(t("value")) + "</p>" +
           c.value.map((x) => "<p>" + esc(x) + "</p>").join("") + "</div>" +
       "</div>" +
-      '<div class="feature-preview">' +
+      // One screen: a single centred phone. Two screens: both, evenly spaced.
+      '<div class="feature-preview' + (b ? "" : " is-single") + '">' +
         '<div class="phone phone--a"><img src="' + dir + a + '.jpg" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
-        '<div class="phone phone--b' + (b === a ? " is-same" : "") + '"><img src="' + dir + b + '.jpg" alt="' + (b === a ? "" : alt) + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
+        (b ? '<div class="phone phone--b"><img src="' + dir + b + '.jpg" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' : "") +
       "</div></article>";
   }
   function renderFeatures() {
