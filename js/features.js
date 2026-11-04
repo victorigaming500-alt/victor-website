@@ -93,7 +93,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "퀵 베팅", desc: "단일 선택을 탭하면 작은 퀵 베팅 슬립이 열려 몇 초 만에 베팅할 수 있습니다.",
       list: ["첫 선택 시 바로 열림", "기본 금액 버튼과 최대 베팅 금액 표시", "바로 베팅하거나 전체 베팅 슬립으로 이동", "선택을 유지한 채 플로팅 버튼으로 최소화"],
       value: ["충동 베팅과 라이브 베팅의 불편을 없앱니다", "단일 선택 베팅의 전환율이 높아집니다"] } },
-  { n: 12, cat: "betslip", points: "caps", screens: ["f12-1"],
+  { n: 12, cat: "betslip", points: "caps", screens: ["f12-1", "f12-2"],
     en: { name: "Stake Shield", desc: "Stake Shield protects a multi bet: the player chooses a condition (e.g. win even if 1 leg loses) in exchange for adjusted odds.",
       list: ["Toggle Stake Shield on any eligible multi", "Choose the protection condition from a list", "Odds adjust instantly to reflect the protection", "Clearly shown on the bet in My Bets"],
       value: ["Encourages bigger multis by reducing perceived risk", "A differentiating feature that builds player confidence"] },
