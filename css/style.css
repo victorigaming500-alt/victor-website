@@ -118,11 +118,11 @@ body.no-scroll { overflow: hidden; }
 .mobile-menu .btn { margin-top: 20px; }
 
 /* Hero */
-/* Always full width. Height follows the 1440×700 artwork up to a 720px cap;
+/* Always full width. Height follows the 1440×700 artwork up to a 790px cap;
    on wider screens the video crops evenly from the top and bottom. */
 .hero {
   position: relative; overflow: hidden; background: #000;
-  width: 100%; height: clamp(600px, 48.6vw, 720px);
+  width: 100%; height: clamp(600px, 48.6vw, 790px);
   display: flex; align-items: center; justify-content: center;
 }
 .hero-bg { display: block; position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; background: #000; }
