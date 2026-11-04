@@ -119,12 +119,8 @@
       } else {
         body = '<ul class="dash-list is-placeholder">' + ("<li>" + esc(t("tbc")) + "</li>").repeat(4) + "</ul>";
       }
-      // Dark image by default; the lime version fades in on hover / tap.
-      return '<article class="product" tabindex="0">' +
-        '<div class="product-media">' +
-          '<img class="product-img" src="assets/img/product-' + id + '.jpg" alt="" width="1146" height="780" loading="lazy">' +
-          '<img class="product-img product-img--lime" src="assets/img/product-' + id + '-lime.jpg" alt="" width="1146" height="780" loading="lazy">' +
-        '</div>' +
+      return '<article class="product">' +
+        '<img class="product-img" src="assets/img/product-' + id + '.jpg?v=2" alt="" width="1146" height="780" loading="lazy">' +
         '<div class="product-body"><div class="product-title"><span class="icon-tile">' + VictorIcon("product-" + id) + "</span>" +
         "<h3>" + esc(p.title) + "</h3></div>" + body + "</div></article>";
     }).join("");
