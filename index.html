@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Victor — iGaming solutions provider</title>
+  <meta name="description" content="Sportsbook, live casino, slots, e-sports, mini games and jackpots on one platform, custom-built in your brand.">
+  <meta name="theme-color" content="#07090B">
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Tektur:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="logo" href="#home" aria-label="Victor — home">
+        <img src="assets/img/logo.png" alt="Victor" width="148" height="32">
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="#home" class="nav-link" data-section="home" data-i18n="nav.home">Home</a>
+        <a href="#designs" class="nav-link" data-section="designs" data-i18n="nav.designs">Designs</a>
+        <a href="#features" class="nav-link" data-section="features" data-i18n="nav.features">Features</a>
+        <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button class="lang-toggle" type="button" aria-label="Change language">
+          <span data-lang="en">EN</span> / <span data-lang="ko">한국어</span>
+        </button>
+        <button class="btn btn-outline btn-sm header-cta" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#designs" data-i18n="nav.designs">Designs</a>
+      <a href="#features" data-i18n="nav.features">Features</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      <button class="btn btn-primary" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <img class="hero-bg" src="assets/img/hero.jpg" alt="" width="1440" height="700" fetchpriority="high">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="hero.eyebrow">iGaming solutions provider</p>
+        <h1 id="hero-title" class="hero-title" data-i18n-html="hero.title">Everything you<br>need to win.</h1>
+        <p class="hero-sub" data-i18n="hero.sub">Sportsbook, live casino, slots, e-sports, mini games and jackpots on one platform, custom-built in your brand.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
+          <a class="btn btn-outline" href="#features" data-i18n="cta.features">View features</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature marquee: two running rows -->
+    <section class="marquee" aria-label="Feature highlights">
+      <div class="marquee-row" data-row="1"><div class="marquee-track"></div></div>
+      <div class="marquee-row marquee-row--reverse" data-row="2"><div class="marquee-track"></div></div>
+    </section>
+
+    <!-- Designs -->
+    <section class="section designs" id="designs" aria-labelledby="designs-title">
+      <div class="container">
+        <header class="section-head section-head--center">
+          <h2 id="designs-title" class="h2" data-i18n="designs.title">Choose your style</h2>
+          <p class="lead" data-i18n="designs.sub">Ready-made looks we tailor to every client.</p>
+        </header>
+        <div class="design-list">
+          <figure class="design">
+            <img src="assets/img/design-graffiti.jpg" alt="Graffiti Modern design on laptop and phone" width="1200" height="560" loading="lazy">
+            <figcaption class="design-name design-name--graffiti">Graffiti<br>Modern</figcaption>
+          </figure>
+          <figure class="design">
+            <img src="assets/img/design-cartoon.jpg" alt="Cartoon Ninjas design on laptop and phone" width="1200" height="560" loading="lazy">
+            <figcaption class="design-name design-name--cartoon">Cartoon<br>Ninjas</figcaption>
+          </figure>
+          <figure class="design">
+            <img src="assets/img/design-green.jpg" alt="Green Space design on laptop and phone" width="1200" height="560" loading="lazy">
+            <figcaption class="design-name design-name--green">Green<br>Space</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section class="section products" id="products" aria-labelledby="products-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="eyebrow" data-i18n="products.eyebrow">Products</p>
+          <h2 id="products-title" class="h2" data-i18n="products.title">One platform. Every product.</h2>
+        </header>
+        <div class="product-grid" id="product-grid"></div>
+      </div>
+    </section>
+
+    <!-- All features -->
+    <section class="section features" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="features-title" class="h2" data-i18n="features.title">All features</h2>
+          <p class="lead" data-i18n="features.sub">56 features in 7 categories. New features added every month, or built on request.</p>
+        </header>
+      </div>
+      <div class="cat-bar">
+        <div class="container">
+          <nav class="cat-chips" id="cat-chips" aria-label="Feature categories"></nav>
+        </div>
+      </div>
+      <div class="container" id="feature-list"></div>
+    </section>
+
+    <!-- Contact banner -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-banner">
+          <div class="contact-text">
+            <h2 id="contact-title" class="contact-title" data-i18n="contact.title">Ready to launch your platform?</h2>
+            <p data-i18n="contact.sub">Tell us about your project and our team will get back to you.</p>
+          </div>
+          <button class="btn btn-dark" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="footer-logo" href="#home"><span class="footer-dot" aria-hidden="true"></span>VICTOR</a>
+        <p class="footer-copy">© <span id="year">2026</span> Victor. <span data-i18n="footer.rights">All rights reserved.</span></p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <p class="footer-head" data-i18n="footer.menu">Menu</p>
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#designs" data-i18n="nav.designs">Designs</a>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-head" data-i18n="footer.contact">Contact</p>
+          <a href="#" data-open-contact data-i18n="footer.email">Email</a>
+          <a href="#" data-open-contact>Telegram</a>
+          <a href="#" data-open-contact>WhatsApp</a>
+          <a href="#" data-open-contact data-i18n="footer.kakao">KakaoTalk</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-head" data-i18n="footer.legal">Legal</p>
+          <a href="#" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" data-i18n="footer.terms">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Contact pop-up -->
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close-contact></div>
+    <form class="modal-panel" id="contact-form" novalidate>
+      <div class="modal-head">
+        <h2 id="modal-title" class="modal-title" data-i18n="cta.contact">Contact us</h2>
+        <button class="modal-close" type="button" data-close-contact aria-label="Close">✕</button>
+      </div>
+      <label class="field"><span data-i18n="form.name">Name</span><input name="name" type="text" autocomplete="name" required></label>
+      <label class="field"><span data-i18n="form.company">Company</span><input name="company" type="text" autocomplete="organization"></label>
+      <label class="field"><span data-i18n="form.email">Email</span><input name="email" type="email" autocomplete="email" required></label>
+      <label class="field"><span data-i18n="form.messenger">Telegram / WhatsApp / KakaoTalk (optional)</span><input name="messenger" type="text"></label>
+      <label class="field"><span data-i18n="form.message">Message</span><textarea name="message" rows="4" required></textarea></label>
+      <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
+      <button class="btn btn-primary btn-block" type="submit" data-i18n="form.send">Send message</button>
+    </form>
+  </div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/features.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
