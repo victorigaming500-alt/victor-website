@@ -1,16 +1,37 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Victor — iGaming solutions provider</title>
-  <meta name="description" content="Sportsbook, live casino, slots, e-sports, mini games and jackpots on one platform, custom-built in your brand.">
+  <title>Victor — 아이게이밍 솔루션 제공사</title>
+  <meta name="description" content="스포츠북, 라이브 카지노, 슬롯, e스포츠, 미니게임, 잭팟을 하나의 플랫폼에. 귀사의 브랜드로 맞춤 제작합니다.">
   <meta name="theme-color" content="#07090B">
-  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="canonical" href="https://victorgaming.io/">
+  <!-- Icons -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <!-- Link preview (Kakao, Facebook, LinkedIn, Telegram, X, Slack...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Victor">
+  <meta property="og:url" content="https://victorgaming.io/">
+  <meta property="og:title" content="Victor — 승리에 필요한 모든 것.">
+  <meta property="og:description" content="스포츠북, 라이브 카지노, 슬롯, e스포츠, 미니게임, 잭팟을 하나의 플랫폼에. 귀사의 브랜드로 맞춤 제작합니다.">
+  <meta property="og:image" content="https://victorgaming.io/assets/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Victor — 승리에 필요한 모든 것.">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Victor — 승리에 필요한 모든 것.">
+  <meta name="twitter:description" content="스포츠북, 라이브 카지노, 슬롯, e스포츠, 미니게임, 잭팟을 하나의 플랫폼에. 귀사의 브랜드로 맞춤 제작합니다.">
+  <meta name="twitter:image" content="https://victorgaming.io/assets/img/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Tektur:wght@500;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=202611051225">
+  <link rel="stylesheet" href="css/style.css?v=202611051304">
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -28,9 +49,6 @@
         <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="lang-toggle" type="button" aria-label="Change language">
-          <span data-lang="en">EN</span> / <span data-lang="ko">한국어</span>
-        </button>
         <button class="btn btn-outline btn-sm header-cta" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <span></span><span></span><span></span>
@@ -50,8 +68,8 @@
     <!-- Hero -->
     <section class="hero" id="home" aria-labelledby="hero-title">
       <!-- Looping background animation. The still image shows while it loads, and on browsers that can't play WebM. -->
-      <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="assets/img/hero.jpg" width="1440" height="700" aria-hidden="true">
-        <source src="assets/video/hero.webm" type="video/webm">
+      <video class="hero-bg" autoplay muted loop playsinline preload="auto" poster="assets/img/hero.jpg?v=2" width="2880" height="1400" aria-hidden="true">
+        <source src="assets/video/hero.webm?v=2" type="video/webm">
       </video>
       <div class="hero-content">
         <p class="eyebrow" data-i18n="hero.eyebrow">iGaming solutions provider</p>
@@ -140,7 +158,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="footer-logo" href="#home"><span class="footer-dot" aria-hidden="true"></span>VICTOR</a>
+        <a class="footer-logo" href="#home"><img src="assets/img/logo.png" alt="Victor" width="148" height="32"></a>
         <p class="footer-copy">© <span id="year">2026</span> Victor. <span data-i18n="footer.rights">All rights reserved.</span></p>
       </div>
       <div class="footer-cols">
@@ -162,6 +180,11 @@
           <p class="footer-head" data-i18n="footer.legal">Legal</p>
           <a href="#" data-i18n="footer.privacy">Privacy</a>
           <a href="#" data-i18n="footer.terms">Terms</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-head" data-i18n="footer.language">Language</p>
+          <button class="lang-option" type="button" data-set-lang="ko" lang="ko">한국어</button>
+          <button class="lang-option" type="button" data-set-lang="en" lang="en">English</button>
         </div>
       </div>
     </div>
@@ -185,8 +208,8 @@
     </form>
   </div>
 
-  <script src="js/icons.js?v=202611051225"></script>
-  <script src="js/features.js?v=202611051225"></script>
-  <script src="js/main.js?v=202611051225"></script>
+  <script src="js/icons.js?v=202611051304"></script>
+  <script src="js/features.js?v=202611051304"></script>
+  <script src="js/main.js?v=202611051304"></script>
 </body>
 </html>

@@ -14,7 +14,7 @@ No build step. Serve the folder with any static server, for example:
 python3 -m http.server 8090
 ```
 
-Then open http://localhost:8090. Add `?lang=ko` for Korean.
+Then open http://localhost:8090. The page opens in Korean; add `?lang=en` for English (the switch is in the footer).
 
 ## Where things are
 

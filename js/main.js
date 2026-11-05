@@ -29,7 +29,7 @@
       "tbc": "Detail to come",
       "contact.title": "Ready to launch your platform?",
       "contact.sub": "Tell us about your project and our team will get back to you.",
-      "footer.rights": "All rights reserved.", "footer.menu": "Menu", "footer.contact": "Contact", "footer.legal": "Legal",
+      "footer.rights": "All rights reserved.", "footer.menu": "Menu", "footer.contact": "Contact", "footer.legal": "Legal", "footer.language": "Language",
       "footer.email": "Email", "footer.kakao": "KakaoTalk", "footer.privacy": "Privacy", "footer.terms": "Terms",
       "form.name": "Name", "form.company": "Company", "form.email": "Email",
       "form.messenger": "Telegram / WhatsApp / KakaoTalk (optional)", "form.message": "Message", "form.send": "Send message",
@@ -62,7 +62,7 @@
       "tbc": "상세 내용 준비 중",
       "contact.title": "플랫폼을 시작할 준비가 되셨나요?",
       "contact.sub": "프로젝트를 알려 주시면 담당 팀이 연락드립니다.",
-      "footer.rights": "All rights reserved.", "footer.menu": "메뉴", "footer.contact": "연락처", "footer.legal": "약관",
+      "footer.rights": "All rights reserved.", "footer.menu": "메뉴", "footer.contact": "연락처", "footer.legal": "약관", "footer.language": "언어",
       "footer.email": "이메일", "footer.kakao": "카카오톡", "footer.privacy": "개인정보처리방침", "footer.terms": "이용약관",
       "form.name": "이름", "form.company": "회사", "form.email": "이메일",
       "form.messenger": "텔레그램 / 왓츠앱 / 카카오톡 (선택)", "form.message": "메시지", "form.send": "메시지 보내기",
@@ -86,7 +86,7 @@
     const q = new URLSearchParams(location.search).get("lang");
     if (q === "ko" || q === "en") return q;
     try { const s = localStorage.getItem("victor-lang"); if (s === "ko" || s === "en") return s; } catch (e) {}
-    return "en";
+    return "ko"; // Korean is the default
   }
 
   const t = (key) => STRINGS[lang][key] ?? STRINGS.en[key] ?? key;
@@ -97,12 +97,14 @@
   /* ---------- Static text ---------- */
   function applyStrings() {
     document.documentElement.lang = lang;
+    document.title = lang === "en" ? "Victor — iGaming solutions provider" : "Victor — 아이게이밍 솔루션 제공사";
     document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
-    document.querySelectorAll(".lang-toggle [data-lang]").forEach((el) => {
-      el.classList.toggle("is-current", el.dataset.lang === lang);
+    document.querySelectorAll("[data-set-lang]").forEach((el) => {
+      const on = el.dataset.setLang === lang;
+      el.classList.toggle("is-current", on);
+      el.setAttribute("aria-pressed", on ? "true" : "false");
     });
-    document.querySelector(".lang-toggle").setAttribute("aria-label", lang === "en" ? "한국어로 보기" : "View in English");
   }
 
   /* ---------- Products ---------- */
@@ -254,14 +256,16 @@
   matchMedia("(min-width: 1280px)").addEventListener("change", (m) => { if (m.matches) setMenu(false); });
 
   /* ---------- Language ---------- */
-  document.querySelector(".lang-toggle").addEventListener("click", () => {
-    lang = lang === "en" ? "ko" : "en";
+  // The switch lives in the footer. Korean is the default, so only English adds ?lang=en to the address.
+  document.querySelectorAll("[data-set-lang]").forEach((btn) => btn.addEventListener("click", () => {
+    if (btn.dataset.setLang === lang) return;
+    lang = btn.dataset.setLang;
     try { localStorage.setItem("victor-lang", lang); } catch (e) {}
     const url = new URL(location.href);
-    if (lang === "ko") url.searchParams.set("lang", "ko"); else url.searchParams.delete("lang");
+    if (lang === "en") url.searchParams.set("lang", "en"); else url.searchParams.delete("lang");
     history.replaceState(null, "", url);
     render();
-  });
+  }));
 
   /* ---------- Contact pop-up ---------- */
   const modal = document.getElementById("contact-modal");
