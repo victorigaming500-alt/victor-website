@@ -4,6 +4,8 @@ Landing page for Victor, an iGaming solutions provider. Built from the accepted 
 ("Option 1", Landing — Desktop 1440 neon) and works at desktop, tablet and mobile sizes,
 in English and Korean.
 
+Live at https://victorgaming.io (GitHub Pages from `main`; the `CNAME` file sets the domain, DNS is at Porkbun).
+
 ## Run it locally
 
 No build step. Serve the folder with any static server, for example:
