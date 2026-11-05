@@ -138,7 +138,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "카지노 홈", desc: "카지노 로비는 위젯으로 구성됩니다. 개인 추천부터 라이브 테이블, 잭팟까지 위젯마다 다른 방식으로 게임을 찾게 합니다.",
       list: ["히어로 배너, 카테고리 칩, 게임 검색", "개인 추천을 위한 추천 게임, 최근 플레이, 내 즐겨찾기", "라이브 카지노, 슬롯, 미니게임, 바카라, 블랙잭, 룰렛 줄", "인기 베팅 & 혜택, 기간 한정 혜택, 잭팟 하이라이트"],
       value: ["개인화·카테고리 위젯으로 한두 번 탭이면 게임에 들어갑니다", "프로모션·잭팟 위젯이 추천 게임과 혜택으로 트래픽을 보냅니다"] } },
-  { n: 18, cat: "casino", points: "caps", screens: ["f18-1"],
+  { n: 18, cat: "casino", points: "caps", screens: ["f18-1"], low: true, // minimised player sits at the bottom
     en: { name: "Game Page & Minimised Play", desc: "Games open in a dedicated game page, and can be minimised so players keep playing while browsing the rest of the product.",
       list: ["Full game view with expand and balance controls", "Minimise a game into a floating window", "Continue browsing sport or casino while the game runs", "Related games and provider shortcuts"],
       value: ["Keeps players inside the product instead of closing the game", "Encourages cross-play between casino and sport"] },
