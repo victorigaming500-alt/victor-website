@@ -333,12 +333,24 @@
     renderMarquee();
     renderFeatures();
   }
-  // Hero video: hold still for people who prefer reduced motion.
+  // Hero video: phones get their own video (data-mobile), everything else the wide one (data-desktop).
+  // Only the one in use is downloaded. Holds still for people who prefer reduced motion.
   const heroVideo = document.querySelector("video.hero-bg");
   if (heroVideo) {
+    const phone = matchMedia("(max-width: 767px)");
     const still = matchMedia("(prefers-reduced-motion: reduce)");
     const apply = () => { if (still.matches) heroVideo.pause(); else heroVideo.play().catch(() => {}); };
-    apply(); still.addEventListener("change", apply);
+    const pick = () => {
+      const key = phone.matches ? "mobile" : "desktop";
+      const src = heroVideo.dataset[key];
+      if (heroVideo.getAttribute("src") === src) return;
+      heroVideo.poster = heroVideo.dataset[key + "Poster"];
+      heroVideo.src = src;
+      apply();
+    };
+    pick();
+    phone.addEventListener("change", pick);
+    still.addEventListener("change", apply);
   }
 
   document.getElementById("year").textContent = new Date().getFullYear();

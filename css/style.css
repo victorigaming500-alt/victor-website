@@ -357,9 +357,10 @@ html[lang="ko"] .list-label, html[lang="ko"] .footer-head, html[lang="ko"] .btn 
   .logo img { width: 120px; }
 
   .hero { height: auto; display: block; padding: 0 0 48px; }
-  .hero-bg { position: relative; height: 340px; object-position: 14% 40%; }
+  /* Phones use their own 1560×1360 video, so the band keeps that shape (capped for big phones). */
+  .hero-bg { position: relative; height: auto; aspect-ratio: 1560 / 1360; max-height: 440px; object-position: 50% 30%; }
   .hero::after {
-    content: ""; position: absolute; left: 0; right: 0; top: 200px; height: 140px;
+    content: ""; position: absolute; left: 0; right: 0; top: calc(min(87.18vw, 440px) - 140px); height: 140px; /* fades the bottom of the video */
     background: linear-gradient(rgba(0, 0, 0, 0), #000); pointer-events: none;
   }
   .hero-content { margin-top: -70px; padding: 0 16px; }
