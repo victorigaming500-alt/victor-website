@@ -42,7 +42,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "라이브 스트리밍 & 라이브 트래커", desc: "라이브 경기는 영상 스트리밍, 시각적 경기 트래커, 실시간 경기 정보를 마켓 바로 옆에서 제공합니다.",
       list: ["경기 페이지에 내장된 라이브 TV 플레이어", "영상이 없을 때 경기 흐름을 보여 주는 매치 트래커", "실시간 정보: 주요 이벤트, 통계, 타임라인", "페이지를 벗어나지 않고 보면서 베팅"],
       value: ["라이브 베터가 경기 내내 머물게 합니다", "라이브 베팅은 스포츠북의 가장 큰 수익원 중 하나입니다"] } },
-  { n: 5, cat: "sport", points: "caps", screens: ["f05-1"],
+  { n: 5, cat: "sport", points: "caps", screens: ["f05-1", "f05-2"],
     en: { name: "Bet Builder", desc: "Players combine several outcomes from the same match into one bet, with the total odds updating as each selection is added.",
       list: ["Pick compatible outcomes across different markets of one event", "Combined odds recalculated live", "Placed as a single bet, or added to a multi", "Available for pre-match and live events"],
       value: ["Same-game combos carry higher margins than standard bets", "Lets players build bets around their own predictions, increasing engagement"] },
