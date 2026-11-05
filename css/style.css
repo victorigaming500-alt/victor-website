@@ -186,6 +186,7 @@ body.no-scroll { overflow: hidden; }
 .design-name--graffiti { background-image: linear-gradient(94deg, #b9ed2c 9%, #bdf12c 86%); }
 .design-name--cartoon { background-image: linear-gradient(94deg, #8a0d7d 9%, #7a2fff 86%); }
 .design-name--green { background-image: linear-gradient(128deg, #1fdb8a 0%, #40d3be 88%); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* Products */
 .products { padding: 24px 0 100px; }
