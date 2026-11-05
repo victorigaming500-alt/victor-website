@@ -261,7 +261,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "설정 & 표시 통화", desc: "계정 정보, 보안, 인증, 환경 설정과 제품 전체에 표시되는 통화까지 설정에서 관리합니다.",
       list: ["이메일·전화 인증이 포함된 계정 정보", "보안 및 본인 인증 (KYC)", "환경 설정: 언어, 시간대, 배당 형식, 표시 통화", "결제 수단: 저장된 암호화폐 지갑과 카드"],
       value: ["가장 익숙한 통화로 금액을 봅니다", "셀프 설정으로 고객 지원 부담이 줄어듭니다"] } },
-  { n: 35, cat: "account", points: "caps", screens: ["f35-1"],
+  { n: 35, cat: "account", points: "caps", screens: ["f35-1", "f35-2"],
     en: { name: "Support", desc: "In-product support with live chat and a searchable FAQ, including the option to attach bets to a conversation.",
       list: ["Live chat with chat history", "FAQ topics for deposits, withdrawals, bonuses and betting", "Attach bets directly to a support chat", "Available from anywhere in the product"],
       value: ["Faster issue resolution improves satisfaction", "Self-service FAQ reduces support costs"] },
