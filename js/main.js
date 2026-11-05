@@ -1,10 +1,7 @@
 /* Victor landing page: content rendering, language switch, running rows,
-   category scroll-spy and the contact pop-up. */
+   and category scroll-spy. */
 (function () {
   "use strict";
-
-  // Where the contact form sends messages. Set this to the sales inbox.
-  const CONTACT_EMAIL = "";
 
   const CATS = window.VICTOR_CATEGORIES;
   const FEATURES = window.VICTOR_FEATURES;
@@ -13,7 +10,7 @@
     en: {
       "skip": "Skip to content",
       "nav.home": "Home", "nav.designs": "Designs", "nav.features": "Features", "nav.contact": "Contact",
-      "cta.contact": "Contact us", "cta.features": "View features",
+      "cta.features": "View features",
       "hero.eyebrow": "iGaming solutions provider",
       "hero.title": "Everything you<br>need to win.",
       "hero.sub": "Sportsbook, live casino, slots, e-sports, mini games and jackpots on one platform, custom-built in your brand.",
@@ -31,11 +28,6 @@
       "contact.sub": "Tell us about your project and our team will get back to you.",
       "footer.rights": "All rights reserved.", "footer.menu": "Menu", "footer.contact": "Contact", "footer.legal": "Legal", "footer.language": "Language",
       "footer.email": "Email", "footer.kakao": "KakaoTalk", "footer.privacy": "Privacy", "footer.terms": "Terms",
-      "form.name": "Name", "form.company": "Company", "form.email": "Email",
-      "form.messenger": "Telegram / WhatsApp / KakaoTalk (optional)", "form.message": "Message", "form.send": "Send message",
-      "form.invalid": "Please fill in your name, a valid email and a message.",
-      "form.opened": "Your email app should open with the message ready to send.",
-      "form.subject": "Victor enquiry",
       "screen": "Mobile screen of",
       "products": {
         sports: { title: "Sports", list: ["Pre-match & live", "Over 8 sports", "1,000+ leagues", "User-customizable view", "Live TV", "Live info"] },
@@ -46,7 +38,7 @@
     ko: {
       "skip": "본문으로 건너뛰기",
       "nav.home": "홈", "nav.designs": "디자인", "nav.features": "기능", "nav.contact": "문의",
-      "cta.contact": "문의하기", "cta.features": "기능 보기",
+      "cta.features": "기능 보기",
       "hero.eyebrow": "아이게이밍 솔루션 제공사",
       "hero.title": "승리에 필요한<br>모든 것.",
       "hero.sub": "스포츠북, 라이브 카지노, 슬롯, e스포츠, 미니게임, 잭팟을 하나의 플랫폼에. 귀사의 브랜드로 맞춤 제작합니다.",
@@ -64,11 +56,6 @@
       "contact.sub": "프로젝트를 알려 주시면 담당 팀이 연락드립니다.",
       "footer.rights": "All rights reserved.", "footer.menu": "메뉴", "footer.contact": "연락처", "footer.legal": "약관", "footer.language": "언어",
       "footer.email": "이메일", "footer.kakao": "카카오톡", "footer.privacy": "개인정보처리방침", "footer.terms": "이용약관",
-      "form.name": "이름", "form.company": "회사", "form.email": "이메일",
-      "form.messenger": "텔레그램 / 왓츠앱 / 카카오톡 (선택)", "form.message": "메시지", "form.send": "메시지 보내기",
-      "form.invalid": "이름, 올바른 이메일, 메시지를 입력해 주세요.",
-      "form.opened": "메일 앱이 열리면 작성된 메시지를 보내 주세요.",
-      "form.subject": "Victor 문의",
       "screen": "모바일 화면:",
       "products": {
         sports: { title: "스포츠", list: ["경기 전 & 라이브", "8개 이상 종목", "1,000개 이상 리그", "사용자 맞춤 화면", "라이브 TV", "라이브 정보"] },
@@ -266,65 +253,6 @@
     history.replaceState(null, "", url);
     render();
   }));
-
-  /* ---------- Contact pop-up ---------- */
-  const modal = document.getElementById("contact-modal");
-  const form = document.getElementById("contact-form");
-  const note = document.getElementById("form-note");
-  let lastFocus = null;
-
-  function openModal() {
-    lastFocus = document.activeElement;
-    setMenu(false);
-    modal.hidden = false;
-    document.body.classList.add("no-scroll");
-    note.textContent = "";
-    setTimeout(() => form.querySelector("input").focus(), 30);
-  }
-  function closeModal() {
-    modal.hidden = true;
-    document.body.classList.remove("no-scroll");
-    if (lastFocus) lastFocus.focus();
-  }
-  document.addEventListener("click", (e) => {
-    if (e.target.closest("[data-open-contact]")) { e.preventDefault(); openModal(); }
-    else if (e.target.closest("[data-close-contact]")) closeModal();
-  });
-  document.addEventListener("keydown", (e) => {
-    if (modal.hidden) return;
-    if (e.key === "Escape") closeModal();
-    if (e.key === "Tab") {
-      const f = [...modal.querySelectorAll("input, textarea, button")];
-      const first = f[0], last = f[f.length - 1];
-      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
-    }
-  });
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let ok = true;
-    form.querySelectorAll("[required]").forEach((el) => {
-      const bad = !el.value.trim() || (el.type === "email" && !/^\S+@\S+\.\S+$/.test(el.value.trim()));
-      el.closest(".field").classList.toggle("is-invalid", bad);
-      if (bad) ok = false;
-    });
-    if (!ok) { note.textContent = t("form.invalid"); return; }
-    const d = new FormData(form);
-    const body = [
-      t("form.name") + ": " + d.get("name"),
-      t("form.company") + ": " + d.get("company"),
-      t("form.email") + ": " + d.get("email"),
-      t("form.messenger") + ": " + d.get("messenger"),
-      "",
-      d.get("message")
-    ].join("\n");
-    location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent(t("form.subject")) + "&body=" + encodeURIComponent(body);
-    note.textContent = t("form.opened");
-  });
-  form.addEventListener("input", (e) => {
-    const field = e.target.closest(".field");
-    if (field) field.classList.remove("is-invalid");
-  });
 
   /* ---------- Go ---------- */
   function render() {

@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700;900&family=Tektur:wght@500;600;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=202611051732">
+  <link rel="stylesheet" href="css/style.css?v=202611052036">
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
@@ -49,7 +49,6 @@
         <a href="#contact" class="nav-link" data-section="contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <button class="btn btn-outline btn-sm header-cta" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
           <span></span><span></span><span></span>
         </button>
@@ -60,7 +59,6 @@
       <a href="#designs" data-i18n="nav.designs">Designs</a>
       <a href="#features" data-i18n="nav.features">Features</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
-      <button class="btn btn-primary" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
     </div>
   </header>
 
@@ -76,8 +74,7 @@
         <h1 id="hero-title" class="hero-title" data-i18n-html="hero.title">Everything you<br>need to win.</h1>
         <p class="hero-sub" data-i18n="hero.sub">Sportsbook, live casino, slots, e-sports, mini games and jackpots on one platform, custom-built in your brand.</p>
         <div class="hero-actions">
-          <button class="btn btn-primary" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
-          <a class="btn btn-outline" href="#features" data-i18n="cta.features">View features</a>
+              <a class="btn btn-outline" href="#features" data-i18n="cta.features">View features</a>
         </div>
       </div>
     </section>
@@ -148,7 +145,6 @@
             <h2 id="contact-title" class="contact-title" data-i18n="contact.title">Ready to launch your platform?</h2>
             <p data-i18n="contact.sub">Tell us about your project and our team will get back to you.</p>
           </div>
-          <button class="btn btn-dark" type="button" data-open-contact data-i18n="cta.contact">Contact us</button>
         </div>
       </div>
     </section>
@@ -171,10 +167,10 @@
         </div>
         <div class="footer-col">
           <p class="footer-head" data-i18n="footer.contact">Contact</p>
-          <a href="#" data-open-contact data-i18n="footer.email">Email</a>
-          <a href="#" data-open-contact>Telegram</a>
-          <a href="#" data-open-contact>WhatsApp</a>
-          <a href="#" data-open-contact data-i18n="footer.kakao">KakaoTalk</a>
+          <a href="#" data-i18n="footer.email">Email</a>
+          <a href="#">Telegram</a>
+          <a href="#">WhatsApp</a>
+          <a href="#" data-i18n="footer.kakao">KakaoTalk</a>
         </div>
         <div class="footer-col">
           <p class="footer-head" data-i18n="footer.legal">Legal</p>
@@ -190,26 +186,8 @@
     </div>
   </footer>
 
-  <!-- Contact pop-up -->
-  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
-    <div class="modal-backdrop" data-close-contact></div>
-    <form class="modal-panel" id="contact-form" novalidate>
-      <div class="modal-head">
-        <h2 id="modal-title" class="modal-title" data-i18n="cta.contact">Contact us</h2>
-        <button class="modal-close" type="button" data-close-contact aria-label="Close">✕</button>
-      </div>
-      <label class="field"><span data-i18n="form.name">Name</span><input name="name" type="text" autocomplete="name" required></label>
-      <label class="field"><span data-i18n="form.company">Company</span><input name="company" type="text" autocomplete="organization"></label>
-      <label class="field"><span data-i18n="form.email">Email</span><input name="email" type="email" autocomplete="email" required></label>
-      <label class="field"><span data-i18n="form.messenger">Telegram / WhatsApp / KakaoTalk (optional)</span><input name="messenger" type="text"></label>
-      <label class="field"><span data-i18n="form.message">Message</span><textarea name="message" rows="4" required></textarea></label>
-      <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
-      <button class="btn btn-primary btn-block" type="submit" data-i18n="form.send">Send message</button>
-    </form>
-  </div>
-
-  <script src="js/icons.js?v=202611051732"></script>
-  <script src="js/features.js?v=202611051732"></script>
-  <script src="js/main.js?v=202611051732"></script>
+  <script src="js/icons.js?v=202611052036"></script>
+  <script src="js/features.js?v=202611052036"></script>
+  <script src="js/main.js?v=202611052036"></script>
 </body>
 </html>
