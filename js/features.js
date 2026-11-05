@@ -175,7 +175,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "벳 소셜", desc: "다른 플레이어의 베팅을 보고, 상위 플레이어를 팔로우하고, 베팅을 복사하는 소셜 베팅 공간입니다.",
       list: ["스포츠와 카지노의 인기, 팔로잉, 리더보드 섹션", "한 번 탭으로 복사하는 인기 단일·다폴더 베팅", "ROI, 적중률, 최고 당첨 기준 리더보드", "팔로우한 플레이어의 새 베팅을 한 피드에서 확인"],
       value: ["베팅 복사로 다른 플레이어의 베팅이 손쉽게 새 베팅이 됩니다", "커뮤니티 기능으로 리텐션과 일일 방문이 늘어납니다"] } },
-  { n: 23, cat: "social", points: "caps", screens: ["f23-1"],
+  { n: 23, cat: "social", points: "caps", screens: ["f23-1", "f23-2"],
     en: { name: "Player Details", desc: "Every player has a public profile with performance stats, favourite sports or games and their latest bets.",
       list: ["Followers, following and level shown on the profile card", "Performance stats: ROI, win rate, bets made, biggest win", "Top sports or top games breakdown", "All, Active and Settled bets with Copy Bet"],
       value: ["Transparent stats build trust in who players follow", "Gives successful players a reason to stay and share"] },
