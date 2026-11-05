@@ -383,12 +383,20 @@ html[lang="ko"] .list-label, html[lang="ko"] .footer-head, html[lang="ko"] .btn 
   .designs { padding: 24px 0 64px; }
   .design-list { gap: 20px; margin-top: 28px; }
   .products { padding: 8px 0 64px; }
-  .product-grid { grid-template-columns: 1fr; gap: 16px; margin-top: 28px; }
-  .product-body { padding: 24px 24px 28px; gap: 16px; }
-  .product-title .icon-tile { width: 44px; height: 44px; }
-  .product-title .icon-tile .icon { width: 22px; height: 22px; }
-  .product-title h3 { font-size: 24px; }
-  .dash-list { font-size: 16px; }
+  /* Phones: products become a swipe row. Each card is ~80% wide and the next one peeks in. */
+  .product-grid {
+    display: flex; gap: 12px; margin: 28px calc(-1 * var(--gutter)) 0; padding: 0 var(--gutter) 4px;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 var(--gutter);
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .product-grid::-webkit-scrollbar { display: none; }
+  .product { flex: 0 0 80%; max-width: 320px; scroll-snap-align: start; }
+  .product-img { aspect-ratio: 16 / 10; }
+  .product-body { padding: 20px 20px 24px; gap: 14px; }
+  .product-title .icon-tile { width: 40px; height: 40px; }
+  .product-title .icon-tile .icon { width: 20px; height: 20px; }
+  .product-title h3 { font-size: 22px; }
+  .dash-list { font-size: 15px; gap: 8px; }
 
   .features { padding: 64px 0; }
   .cat-bar { margin-top: 28px; }
