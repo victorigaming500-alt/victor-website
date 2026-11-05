@@ -159,7 +159,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "카지노 검색", desc: "최근 검색어와 추천 검색어와 함께 게임과 제공사를 바로 찾아 주는 카지노 전용 검색입니다.",
       list: ["입력하는 즉시 결과 표시", "최근 검색어와 추천 검색어", "카테고리별로 묶은 결과", "결과가 없으면 스포츠 결과 추천"],
       value: ["게임까지의 경로를 줄입니다", "원하는 것을 찾지 못해 떠나는 일을 줄입니다"] } },
-  { n: 21, cat: "casino", points: "caps", screens: ["f21-1"],
+  { n: 21, cat: "casino", points: "caps", screens: ["f21-1", "f21-2"],
     en: { name: "Jackpots & Biggest Wins", desc: "Live jackpot amounts and a feed of the biggest recent wins are shown on the landing page to create excitement.",
       list: ["Jackpot tiers (Platinum, Gold, Silver, Bronze) with live amounts", "Biggest Wins table: player, game, time, bet, multiplier and win", "Updates in real time", "Tapping a game opens it directly"],
       value: ["Social proof that builds trust and excitement", "Drives traffic to jackpot and featured games"] },
