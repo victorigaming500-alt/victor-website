@@ -9,8 +9,8 @@
   const STRINGS = {
     en: {
       "skip": "Skip to content",
-      "nav.home": "Home", "nav.designs": "Designs", "nav.features": "Features",
-      "cta.features": "View features",
+      "nav.home": "Home", "nav.designs": "Designs", "nav.features": "Features", "nav.contact": "Contact",
+      "cta.contact": "Contact us", "cta.features": "View features",
       "hero.eyebrow": "iGaming solutions provider",
       "hero.title": "Everything you<br>need to win.",
       "hero.sub": "Sportsbook, live casino, slots, e-sports, mini games and jackpots on one platform, custom-built in your brand.",
@@ -24,6 +24,8 @@
       "value": "Business value",
       "providers": "Providers",
       "tbc": "Detail to come",
+      "contact.title": "Ready to launch your platform?",
+      "contact.sub": "Tell us about your project and our team will get back to you.",
       "footer.rights": "All rights reserved.", "footer.menu": "Menu", "footer.contact": "Contact", "footer.legal": "Legal", "footer.language": "Language",
       "footer.email": "Email", "footer.kakao": "KakaoTalk", "footer.privacy": "Privacy", "footer.terms": "Terms",
       "screen": "Mobile screen of",
@@ -35,8 +37,8 @@
     },
     ko: {
       "skip": "본문으로 건너뛰기",
-      "nav.home": "홈", "nav.designs": "디자인", "nav.features": "기능",
-      "cta.features": "기능 보기",
+      "nav.home": "홈", "nav.designs": "디자인", "nav.features": "기능", "nav.contact": "문의",
+      "cta.contact": "문의하기", "cta.features": "기능 보기",
       "hero.eyebrow": "아이게이밍 솔루션 제공사",
       "hero.title": "승리에 필요한<br>모든 것.",
       "hero.sub": "스포츠북, 라이브 카지노, 슬롯, e스포츠, 미니게임, 잭팟을 하나의 플랫폼에. 귀사의 브랜드로 맞춤 제작합니다.",
@@ -50,6 +52,8 @@
       "value": "비즈니스 가치",
       "providers": "게임 제공사",
       "tbc": "상세 내용 준비 중",
+      "contact.title": "플랫폼을 시작할 준비가 되셨나요?",
+      "contact.sub": "프로젝트를 알려 주시면 담당 팀이 연락드립니다.",
       "footer.rights": "All rights reserved.", "footer.menu": "메뉴", "footer.contact": "연락처", "footer.legal": "약관", "footer.language": "언어",
       "footer.email": "이메일", "footer.kakao": "카카오톡", "footer.privacy": "개인정보처리방침", "footer.terms": "이용약관",
       "screen": "모바일 화면:",
@@ -200,7 +204,7 @@
   /* ---------- Header nav follows the scroll ---------- */
   function setupNavSpy() {
     const links = [...document.querySelectorAll(".nav-link")];
-    const ids = ["home", "designs", "features"];
+    const ids = ["home", "designs", "features", "contact"];
     const map = { products: "designs" };
     const sections = [...document.querySelectorAll("main > section[id]")];
     const io = new IntersectionObserver((entries) => {
