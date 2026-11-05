@@ -253,15 +253,18 @@ body.no-scroll { overflow: hidden; }
 
 .feature-preview { position: relative; flex: 0 0 564px; height: 430px; align-self: center; }
 /* Phones: one screen sits in the middle; two screens get equal gaps at both sides and between. */
-.feature-preview { --pw: 273px; --gap: calc((100% - 2 * var(--pw)) / 3); }
+/* --ya / --yb: how high the first and second phone sit. */
+.feature-preview { --pw: 273px; --gap: calc((100% - 2 * var(--pw)) / 3); --ya: 23px; --yb: -177px; }
 .phone {
   position: absolute; width: var(--pw); aspect-ratio: 360 / 800; border: 1px solid var(--lime-edge);
   border-radius: 16px; overflow: hidden; background: var(--surf-2);
 }
 .phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.phone--a { left: var(--gap); top: 23px; }
-.phone--b { left: calc(2 * var(--gap) + var(--pw)); top: -177px; }
+.phone--a { left: var(--gap); top: var(--ya); }
+.phone--b { left: calc(2 * var(--gap) + var(--pw)); top: var(--yb); }
 .feature-preview.is-single .phone--a { left: calc(50% - var(--pw) / 2); }
+/* For screens whose feature sits at the bottom (e.g. a bottom sheet): crop the top instead of the bottom. */
+.feature-preview.is-low .phone--a { top: var(--yb); }
 
 /* Contact banner */
 .contact { padding: 40px 0 100px; }
@@ -342,9 +345,7 @@ html[lang="ko"] .list-label, html[lang="ko"] .footer-head, html[lang="ko"] .btn 
   .feature { flex-direction: column; align-items: stretch; gap: 32px; padding: 40px 40px 0; }
   .feature-desc, .value-box { max-width: none; }
   .feature-preview { flex: none; width: 100%; height: 420px; }
-  .feature-preview { --pw: 220px; }
-  .phone--a { top: 24px; }
-  .phone--b { top: -40px; }
+  .feature-preview { --pw: 220px; --ya: 24px; --yb: -40px; }
 
   .contact-banner { padding: 48px; }
   .contact-title { font-size: 34px; }
@@ -403,10 +404,8 @@ html[lang="ko"] .list-label, html[lang="ko"] .footer-head, html[lang="ko"] .btn 
   .value-box { padding: 14px; }
   .value-box p:not(.points-label) { font-size: 14px; }
   .feature-preview { height: 300px; }
-  .feature-preview { --pw: 150px; }
+  .feature-preview { --pw: 150px; --ya: 18px; --yb: -16px; }
   .phone { border-radius: 12px; }
-  .phone--a { top: 18px; }
-  .phone--b { top: -16px; }
 
   .contact { padding: 16px 0 64px; }
   .contact-banner { flex-direction: column; align-items: flex-start; gap: 24px; padding: 32px 24px; }

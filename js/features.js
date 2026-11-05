@@ -1,6 +1,7 @@
 /* All 56 Victor features, from "Ninja Features [ENG]".
    Edit text here; the page builds the feature rows, cards and chips from this list.
    screens: phone images in assets/screens (f<number>-<n>.jpg).
+   low: true = a single phone sits higher so the bottom of the screen shows (for bottom sheets).
    points: "caps" = Key capabilities, "widgets" = Widgets on the page, "how" = How it works. */
 window.VICTOR_CATEGORIES = [
   { id: "sport",      en: "Sport Betting",     ko: "스포츠 베팅" },
@@ -86,7 +87,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "베팅 슬립 (단일 & 다폴더)", desc: "모든 선택을 담는 플로팅 베팅 슬립으로, 실시간 배당과 예상 수익 계산과 함께 단일/다폴더를 전환합니다.",
       list: ["선택별 베팅 금액을 입력하는 단일·다폴더 탭", "빠른 금액 버튼과 실시간 \"예상 수익\" 계산", "배당 변경 수락 옵션으로 베팅 거절 방지", "차단되거나 변경된 선택에 대한 명확한 오류 표시"],
       value: ["빠르고 명확한 베팅 슬립이 베팅 건수를 직접 늘립니다", "다폴더는 슬립당 평균 배당과 마진을 높입니다"] } },
-  { n: 11, cat: "betslip", points: "caps", screens: ["f11-1"],
+  { n: 11, cat: "betslip", points: "caps", screens: ["f11-1"], low: true, // bottom sheet: show the lower part of the screen
     en: { name: "Quick Bet", desc: "When a player taps a single selection, a compact Quick Betslip opens so the bet can be placed in seconds.",
       list: ["Opens instantly on the first selection", "Preset stake buttons and max bet shown", "Place Bet or move the selection to the full betslip", "Minimises to a floating button that keeps selections"],
       value: ["Removes friction for impulse and live bets", "Higher conversion on single-selection bets"] },

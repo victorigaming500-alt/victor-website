@@ -168,7 +168,7 @@
           c.value.map((x) => "<p>" + esc(x) + "</p>").join("") + "</div>" +
       "</div>" +
       // One screen: a single centred phone. Two screens: both, evenly spaced.
-      '<div class="feature-preview' + (b ? "" : " is-single") + '">' +
+      '<div class="feature-preview' + (b ? "" : " is-single") + (f.low ? " is-low" : "") + '">' +
         '<div class="phone phone--a"><img src="' + dir + a + '.jpg' + ASSET_V + '" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' +
         (b ? '<div class="phone phone--b"><img src="' + dir + b + '.jpg' + ASSET_V + '" alt="' + alt + '" width="720" height="1600" loading="lazy" decoding="async"></div>' : "") +
       "</div></article>";
