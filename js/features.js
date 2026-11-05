@@ -108,7 +108,7 @@ window.VICTOR_FEATURES = [
     ko: { name: "캐시아웃", desc: "진행 중인 베팅을 실시간 캐시아웃 금액으로 전체 또는 일부 미리 정산할 수 있습니다.",
       list: ["대상 베팅마다 실시간 캐시아웃 금액 표시", "슬라이더로 부분 캐시아웃", "확인 및 처리 상태 표시", "내역에서 캐시아웃 베팅 명확히 표시"],
       value: ["플레이어에게 주도권을 주어 신뢰와 베팅 금액이 늘어납니다", "캐시아웃 금액에 마진이 포함되어 조기 정산에서도 수익이 생깁니다"] } },
-  { n: 14, cat: "betslip", points: "caps", screens: ["f14-1"],
+  { n: 14, cat: "betslip", points: "caps", screens: ["f14-1"], low: true, // bottom sheet: show the lower part of the screen
     en: { name: "Bet Placed Confirmation", desc: "After placing a bet, a confirmation shows the bet summary and any reward the player earned, such as level-based comp.",
       list: ["Success message with bet type and odds", "Full bet card with stake and potential return", "Shows rewards unlocked by the bet (e.g. Level 2 comp)", "Keep Selection or Done to continue"],
       value: ["Reassures players and reduces support questions", "A moment to highlight rewards and encourage the next bet"] },
